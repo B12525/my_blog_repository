@@ -1,0 +1,5 @@
+{% for post in object_list %}
+<h1>{{post.title}}</h1>
+<p>{{post.text}}</p>
+<h2 style="text-aligh : left">{{post.date|date:'Y:m:d'}}
+{% endfor %}

@@ -1,0 +1,6 @@
+{% for post in object_list %}
+<a href = "{{post.id}}"><h1>{{post.title}}</h1>
+  <p>{{post.title_text}}</p>
+  <h3 style = "text-aligh : left">{{post.date|date:'Y:m:d'}}</h3>
+  <p>{{posts|safe}}
+{% endfor %}
