@@ -1,6 +1,12 @@
+{% extends 'blog/wrapper.html'%}
+{% block content %}
 {% for post in object_list %}
-<a href = "{{post.id}}"><h1>{{post.title}}</h1>
+<div class = "jumbotron">
+  <div class = "container">
+<h1><a href = "post/{{post.id}}" style = "color : dark">{{post.title}}</a></h1>
   <p>{{post.title_text}}</p>
-  <h3 style = "text-aligh : left">{{post.date|date:'Y:m:d'}}</h3>
-  <p>{{posts|safe}}
+  <h3 style = "text-aligh : left">Published in {{post.date|date:'Y:m:d'}}</h3>
+<hr>
+  </div>
 {% endfor %}
+{% endblock %}

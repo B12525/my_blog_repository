@@ -1,5 +1,7 @@
-{% for post in object_list %}
-<h1>{{post.title}}</h1>
-<p>{{post.text}}</p>
-<h2 style="text-aligh : left">{{post.date|date:'Y:m:d'}}
-{% endfor %}
+{% extends 'blog/wrapper_one_posts.html' %}
+{% block content %}
+<h1>{{posts.title}}</h1>
+<p>{{posts.text}}</p>
+<h2 style="text-aligh : left">{{posts.date|date:'Y:m:d'}}</h2>
+    <p>{{posts|safe}}</p>
+{% endblock %}
